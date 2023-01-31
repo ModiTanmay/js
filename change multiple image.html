@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+
+    <style>
+
+        
+        button1
+        {
+            
+            position: absolute;
+            top:50%;
+            right:10%;
+            font-weight: bold;
+            font-size: 34px;
+            height: 50px;
+            width: 50px;
+            border: none;
+            background: transparent;
+         
+            border-radius: 8px;
+            color: aqua;
+        }
+        button2
+        {
+            position: absolute;
+            top:50%;
+            left:10%;
+            font-weight: bold;
+            font-size: 34px;
+            height: 50px;
+            width: 50px;
+            border: none;
+            background: transparent;
+            
+            border-radius: 8px;
+            color: aqua;
+        }
+
+
+    
+
+    </style>
+</head>
+<body>
+    <div>
+        <img src="images/i1.jfif" height="500px" width="100%" id="i1">
+        
+    
+    </div>
+
+    <button1>
+    <button onclick="changemultiimage()"> > </button>
+    </button1>
+
+    <button2>
+    <button onclick="reverse()"> < </button>
+    </button2>
+
+    <script>
+        img=document.getElementById('i1');
+        img=dicument.getElementById('i5');
+
+        
+        
+
+        
+
+      //console.log(img);
+
+
+        function changemultiimage()
+        {
+            if(img.src.match('images/i1.jfif'))
+            {
+              img.src='images/i2.jpg';
+            }
+            else if(img.src.match('images/i2.jpg'))
+            {
+                img.src='images/i3.jpg';
+            }
+            else if(img.src.match('images/i3.jpg'))
+            {
+                img.src='images/i4.jpg';
+            }
+            else if(img.src.match('images/i4.jpg'))
+            {
+                img.src='images/i5.jpg';
+            }
+            else
+            {
+                img.src='images/i1.jfif';
+            }
+
+            
+        }
+
+    changemultiimage()
+
+    function reverse()
+    {
+        if(img.src.match('images/i5.jpg'))
+            {
+              img.src='images/i4.jpg';
+            }
+            else if(img.src.match('images/i4.jpg'))
+            {
+                img.src='images/i3.jpg';
+            }
+            else if(img.src.match('images/i3.jpg'))
+            {
+                img.src='images/i2.jpg';
+            }
+            else if(img.src.match('images/i2.jpg'))
+            {
+                img.src='images/i1.jfif';
+            }
+            else
+            {
+                img.src='images/i5.jpg';
+            } 
+    }
+        
+    </script>
+    
+</body>
+</html>
